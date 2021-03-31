@@ -50,7 +50,7 @@ const NewTask: NextPage = () => {
     <StateContextProvider>
       <div>
         {/* <TaskForm taskCreated={mutate} /> */}
-        <TaskForm />
+        <TaskForm task={{ id: 0, title: '', created_at: '' }} />
       </div>
     </StateContextProvider>
   )

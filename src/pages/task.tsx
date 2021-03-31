@@ -4,7 +4,7 @@ import { GetStaticProps, NextPage } from 'next'
 // import useSWR from 'swr'
 import Task from '../components/task/Task'
 // import TaskForm from '../components/task/TaskForm'
-import StateContextProvider from '../context/StateContext'
+// import StateContextProvider from '../context/StateContext'
 import { getAllTasksData } from '../lib/tasks'
 
 // const SERVERURL = 'http://127.0.0.1:8000/'
@@ -46,17 +46,17 @@ const TaskPage: NextPage<Props> = ({ tasks }) => {
   // }, [])
 
   return (
-    <StateContextProvider>
+    // <StateContextProvider>
+    <div>
+      {/* <TaskForm taskCreated={mutate} /> */}
       <div>
-        {/* <TaskForm taskCreated={mutate} /> */}
-        <div>
-          {tasks?.map((task: TasksData) => (
-            // <Task key={task.id} task={task} taskDeleted={mutate} />
-            <Task key={task.id} task={task} />
-          ))}
-        </div>
+        {tasks?.map((task: TasksData) => (
+          // <Task key={task.id} task={task} taskDeleted={mutate} />
+          <Task key={task.id} task={task} />
+        ))}
       </div>
-    </StateContextProvider>
+    </div>
+    // </StateContextProvider>
   )
 }
 
