@@ -5,7 +5,7 @@ import { NextPage } from 'next'
 // import useSWR from 'swr'
 // import Task from '../components/task/Task'
 import TaskForm from '../components/task/TaskForm'
-import StateContextProvider from '../context/StateContext'
+// import StateContextProvider from '../context/StateContext'
 // import { getAllTasksData } from '../lib/tasks'
 
 // const SERVERURL = 'http://127.0.0.1:8000/'
@@ -47,12 +47,12 @@ const NewTask: NextPage = () => {
   // }, [])
 
   return (
-    <StateContextProvider>
-      <div>
-        {/* <TaskForm taskCreated={mutate} /> */}
-        <TaskForm task={{ id: 0, title: '', created_at: '' }} />
-      </div>
-    </StateContextProvider>
+    // <StateContextProvider>
+    <div>
+      {/* <TaskForm taskCreated={mutate} /> */}
+      <TaskForm task={{ id: 0, title: '', created_at: '' }} />
+    </div>
+    // </StateContextProvider>
   )
 }
 
